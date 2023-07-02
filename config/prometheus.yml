@@ -2,12 +2,9 @@ global:
   scrape_interval: 30s
 
 scrape_configs:
-  - job_name: 'demo-app-1'
+  - job_name: 'demo'
     static_configs:
-    - targets: ['demo-app-1:8080']  
-  - job_name: 'demo-app-2'
-    static_configs:
-    - targets: ['demo-app-2:8080']  
-  - job_name: 'demo-app-3'
-    static_configs:
-    - targets: ['demo-app-3:8080']  
+    - targets:
+      - 'demo-app-1:8080'
+      - 'demo-app-2:8080'
+      - 'demo-app-3:8080'

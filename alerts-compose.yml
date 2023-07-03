@@ -1,0 +1,14 @@
+services:
+
+  alertmanager:
+    image: prom/alertmanager:v0.25.0
+    ports:
+      - 9093:9093
+    volumes:
+      - ./config/alertmanager.yml:/etc/prometheus/alertmanager.yml
+    networks:
+      - metrics
+
+networks:
+  metrics:
+    name: metrics
